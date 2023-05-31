@@ -13,20 +13,46 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css"
+    integrity="sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK" crossorigin="anonymous">
 </head>
 
-<body>
-  <div class="jumbotron">
+<body class="container">
+  <div class="jumbotron justify-content-center">
   <div class="chessboard" id="board5" style="margin: 0 auto; width: 400px;">
   </div>
-  <div style="margin: 5px auto; width: 400px;">
-    <input type="button" id="startPositionBtn5" value="|<" />
-    <input type="button" id="prevBtn5" value="<" />
-    <input type="button" id="nextBtn5" value=">" />
-    <input type="button" id="endPositionBtn5" value=">|" />
-    <p><span id="pgn5"></span></p>
+  <div>
+    <input class="btn btn-primary"type="button" id="startPositionBtn5" value="|<" />
+    <input class="btn btn-primary" type="button" id="prevBtn5" value="<" />
+    <input class="btn btn-primary" type="button" id="nextBtn5" value=">" />
+    <input class="btn btn-primary" type="button" id="endPositionBtn5" value=">|" />
+    <br>
+    <br>
+    <!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">View PGN</button>
+
   </div>
 </div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      
+      <div class="modal-body">
+        <p id="pgn5"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </body>
 
 </html>

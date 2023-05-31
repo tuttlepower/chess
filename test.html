@@ -5,156 +5,70 @@
     <title>Chess</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link
-      rel="icon"
-      href="https://raw.githubusercontent.com/tuttlepower/tuttlepower/master/Resources/Images/facelighting.png"
-      type="Head"
-      sizes="16x16"
-    />
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css"
-    integrity="sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK" crossorigin="anonymous">
-    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
         integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css"
+        integrity="sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK" crossorigin="anonymous">
 </head>
 
 <body>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-1">
-                <p>Previous Game Arrow</p>
-            </div>
-            <div class="col-lg-10">
-                <div id="myBoard" style="width:50%;"></div>
-            </div>
-            <div class="col-lg-1">
-                <p>Next Game Arrow</p>
-            </div>
-
+<div class="jumbotron"><h1>Hello World</h1></div>
+<div class="container p-3  bg-dark text-white">
+    <div class=" justify-content-center">
+        <div class="chessboard" id="board5" style="margin: 0 auto; width: 400px;">
         </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row jumbotron">
-            <div class="col-lg-6">
-                <div id="myBoard"  style="margin: 5px auto; width: 80vh;"></div>
-            </div>
-            <div class="col-lg-6">
-                <label>Status:</label>
-                <div id="status"></div>
-                <label>FEN:</label>
-                <div id="fen"></div>
-                <label>PGN:</label>
-                <div id="pgn"></div>
-            </div>
+        <div>
+          <input class="btn btn-primary"type="button" id="startPositionBtn5" value="|<" />
+          <input class="btn btn-primary" type="button" id="prevBtn5" value="<" />
+          <input class="btn btn-primary" type="button" id="nextBtn5" value=">" />
+          <input class="btn btn-primary" type="button" id="endPositionBtn5" value=">|" />
+          <br>
+          <br>
+          <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">View PGN</button>
+      
         </div>
-    </div>
+      </div>
+      
+      
+      <!-- Modal -->
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+      
+          <!-- Modal content-->
+          <div class="modal-content">
+            
+            <div class="modal-body">
+              <p id="pgn5"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+      
+        </div>
+      </div></div>
 </body>
 
 </html>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
     integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD" crossorigin="anonymous">
 </script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.2/chess.js"
     integrity="sha384-s3XgLpvmHyscVpijnseAmye819Ee3yaGa8NxstkJVyA6nuDFjt59u1QvuEl/mecz" crossorigin="anonymous">
 </script>
-
+<script>
+</script>
+<script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
+    integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD" crossorigin="anonymous">
+</script>
+<script src="chess_replay.js"></script>
 <img src="img/chesspieces/wikipedia/wP.png" id="76c8-0876-7cf6-8c1a-b387-a174-73e3-dd90" alt="" class="piece-417db"
     data-piece="wP" style="width: 49px; height: 49px; display: none;">
-<script>
-    var board = null
-    var game = new Chess()
-    var $status = $('#status')
-    var $fen = $('#fen')
-    var $pgn = $('#pgn')
-
-    function onDragStart(source, piece, position, orientation) {
-        // do not pick up pieces if the game is over
-        if (game.game_over()) return false
-
-        // only pick up pieces for the side to move
-        if ((game.turn() === 'w' && piece.search(/^b/) !== -1) ||
-            (game.turn() === 'b' && piece.search(/^w/) !== -1)) {
-            return false
-        }
-    }
-
-    function onDrop(source, target) {
-        // see if the move is legal
-        var move = game.move({
-            from: source,
-            to: target,
-            promotion: 'q' // NOTE: always promote to a queen for example simplicity
-        })
-
-        // illegal move
-        if (move === null) return 'snapback'
-
-        updateStatus()
-    }
-
-    // update the board position after the piece snap
-    // for castling, en passant, pawn promotion
-    function onSnapEnd() {
-        board.position(game.fen())
-    }
-
-    function updateStatus() {
-        var status = ''
-
-        var moveColor = 'White'
-        if (game.turn() === 'b') {
-            moveColor = 'Black'
-        }
-
-        // checkmate?
-        if (game.in_checkmate()) {
-            status = 'Game over, ' + moveColor + ' is in checkmate.'
-        }
-
-        // draw?
-        else if (game.in_draw()) {
-            status = 'Game over, drawn position'
-        }
-
-        // game still on
-        else {
-            status = moveColor + ' to move'
-
-            // check?
-            if (game.in_check()) {
-                status += ', ' + moveColor + ' is in check'
-            }
-        }
-
-        $status.html(status)
-        $fen.html(game.fen())
-        $pgn.html(game.pgn())
-    }
-
-    var config = {
-        draggable: true,
-        position: 'start',
-        onDragStart: onDragStart,
-        onDrop: onDrop,
-        onSnapEnd: onSnapEnd
-    }
-    board = Chessboard('myBoard', config)
-
-    updateStatus()
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.2/chess.js"></script>
