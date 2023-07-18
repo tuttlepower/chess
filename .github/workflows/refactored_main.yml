@@ -1,4 +1,4 @@
-name: Scrape latest chess data V.2
+name: Scrape latest chess data
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
         # Extract the time of the last game from the .pgn file
         last_game_time=$(grep -oE "\[UTCTime \"[0-9]{2}:[0-9]{2}:[0-9]{2}\"\]" test_tuttlepower_games.pgn | tail -1 | grep -oE "[0-9]{2}:[0-9]{2}:[0-9]{2}")
         # Convert the date and time to a Unix timestamp
-        last_game_timestamp=$(date -u -d "${last_game_date}T${last_game_time}" +%s)
+        last_game_timestamp=$(date -u -d "${last_game_date} ${last_game_time}" +%s)
         echo "LAST_GAME_TIMESTAMP=$last_game_timestamp" >> $GITHUB_ENV
 
     - name: Fetch latest data
