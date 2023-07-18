@@ -1,4 +1,4 @@
-name: Scrape latest chess data V2
+name: Scrape latest chess data v2
 
 on:
   push:
@@ -17,9 +17,9 @@ jobs:
       id: last_game_timestamp
       run: |
         # Extract the date of the newest game from the .pgn file
-        last_game_date=$(grep -oE "\[UTCDate \"[0-9]{4}\.[0-9]{2}\.[0-9]{2}\"\]" test_tuttlepower_games.pgn | head -1 | grep -oE "[0-9]{4}\.[0-9]{2}\.[0-9]{2}")
+        last_game_date=$(grep -m 1 -oE "\[UTCDate \"[0-9]{4}\.[0-9]{2}\.[0-9]{2}\"\]" test_tuttlepower_games.pgn | grep -oE "[0-9]{4}\.[0-9]{2}\.[0-9]{2}")
         # Extract the time of the newest game from the .pgn file
-        last_game_time=$(grep -oE "\[UTCTime \"[0-9]{2}:[0-9]{2}:[0-9]{2}\"\]" test_tuttlepower_games.pgn | head -1 | grep -oE "[0-9]{2}:[0-9]{2}:[0-9]{2}")
+        last_game_time=$(grep -m 1 -oE "\[UTCTime \"[0-9]{2}:[0-9]{2}:[0-9]{2}\"\]" test_tuttlepower_games.pgn | grep -oE "[0-9]{2}:[0-9]{2}:[0-9]{2}")
         # Convert the date and time to a Unix timestamp
         last_game_timestamp=$(python -c "import datetime; print(int(datetime.datetime.strptime('${last_game_date} ${last_game_time}', '%Y.%m.%d %H:%M:%S').timestamp()))")
         echo "LAST_GAME_TIMESTAMP=$last_game_timestamp" >> $GITHUB_ENV
