@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Recent Lichess Games</title>
+    <style>
+        .game {
+            margin-bottom: 2em;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>My 10 Most Recent Games from Lichess</h1>
+    <div id="games"></div>
+
+    <script>
+        fetch('.tuttlepower_games.pgn')
+            .then(response => response.text())
+            .then(data => {
+                // Split games by two newline characters
+                const games = data.split('\n\n').filter(game => game.trim() !== '');
+                const gamesDiv = document.getElementById('games');
+                games.forEach((game, index) => {
+                    const gameDiv = document.createElement('div');
+                    gameDiv.className = 'game';
+                    gameDiv.textContent = `Game ${index + 1}:\n${game}`;
+                    gamesDiv.appendChild(gameDiv);
+                });
+            });
+    </script>
+</body>
+</html>
