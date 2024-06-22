@@ -29,4 +29,4 @@ jobs:
 
     - name: Run script
       run: |
-        python service.runner.py
+        python runner.py
