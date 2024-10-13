@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elo Distribution Chart</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-dark text-light">
+    <div class="container">
+        <div class="text-center mt-5">
+            <h1>Chess Elo Distribution</h1>
+            <p>Compare weighted Elo distributions by entering two Lichess usernames below</p>
+            <!-- GitHub Link -->
+            <p><a href="https://github.com/tuttlepower" target="_blank" class="text-info">Check out my GitHub for more projects</a></p>
+        </div>
+
+        <div class="row">
+            <!-- Player Stats Sidebar -->
+            <div class="col-md-4 col-sm-12 mt-5">
+                <div class="p-3 bg-secondary rounded">
+                    <h4>Player Stats</h4>
+                    <p id="player1Stats">Player 1: (No Data)</p>
+                    <p id="player2Stats">Player 2: (No Data)</p>
+                    <p id="winProb">Win Probability: (No Data)</p>
+                </div>
+            </div>
+            
+            <!-- Chart Container -->
+            <div class="col-md-8 col-sm-12">
+                <div class="canvas-container">
+                    <canvas id="eloChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input for Usernames and Time Control -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-3 col-sm-12 mt-3">
+                <input type="text" class="form-control" id="player1" placeholder="Enter first Lichess username">
+            </div>
+            <div class="col-md-3 col-sm-12 mt-3">
+                <input type="text" class="form-control" id="player2" placeholder="Enter second Lichess username">
+            </div>
+            <!-- Time Control Dropdown -->
+            <div class="col-md-3 col-sm-12 mt-3">
+                <select id="timeControlSelect" class="form-control">
+                    <option value="blitz" selected>Blitz</option>
+                    <option value="rapid">Rapid</option>
+                    <option value="classical">Classical</option>
+                </select>
+            </div>
+            <div class="col-md-2 col-sm-12 mt-3">
+                <button id="updateButton" class="btn btn-primary w-100">Update Chart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

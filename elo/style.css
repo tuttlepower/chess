@@ -1,0 +1,23 @@
+body {
+    background-color: #212529;
+    height: 100vh;
+}
+
+h1, p, label {
+    color: #f8f9fa;
+}
+
+input {
+    background-color: #343a40;
+    color: #f8f9fa;
+    border: 1px solid #495057;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.canvas-container {
+    height: 700px; /* Increased height for better visibility */
+}

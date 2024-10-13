@@ -40,3 +40,14 @@ CREATE TABLE chess.games (
     checkmate boolean,
     pgn text
 );
+
+https://ioaglobal.org/blog/integration-of-chess-and-data-science-techniques/#
+
+https://towardsdatascience.com/tagged/chess
+
+https://arxiv.org/abs/2304.11425
+
+https://medium.com/swlh/data-science-project-looking-for-hidden-insights-in-my-2-thousand-chess-games-27cfc06b6e94
+
+
+
