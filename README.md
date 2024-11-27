@@ -50,4 +50,7 @@ https://arxiv.org/abs/2304.11425
 https://medium.com/swlh/data-science-project-looking-for-hidden-insights-in-my-2-thousand-chess-games-27cfc06b6e94
 
 
+https://www.chess.com/news/view/published-data-api#pubapi-endpoint-games-archive
 
+Description: Array of Live and Daily Chess games that a player has finished.
+URL pattern: https://api.chess.com/pub/player/{username}/games/{YYYY}/{MM}

@@ -1,0 +1,36 @@
+{
+    "id": "36ukjVsk",
+    "rated": true,
+    "variant": "standard",
+    "speed": "blitz",
+    "perf": "blitz",
+    "createdAt": 1690572901345,
+    "lastMoveAt": 1690573187334,
+    "status": "resign",
+    "players": {
+        "white": {
+            "user": {
+                "name": "TuttlePower",
+                "id": "tuttlepower"
+            },
+            "rating": 1594,
+            "ratingDiff": 6
+        },
+        "black": {
+            "user": {
+                "name": "Cardano83",
+                "id": "cardano83"
+            },
+            "rating": 1607,
+            "ratingDiff": -6
+        }
+    },
+    "winner": "white",
+    "moves": "e4 c5 Bc4 e6 Nf3 d5 exd5 exd5 Bb3 h6 d4 c4 Ba4+ Bd7 Qe2+ Be7 Bxd7+ Qxd7 Ne5 Qe6 O-O Nc6 Re1 Nf6 Ng6 Qxe2 Rxe2 fxg6 Nc3 Kf7 Bf4 Rhe8 Nb5 Bd8 Nd6+ Kf8 Nxe8 Nxe8 Rae1 Bf6 c3 g5 Be5 Bxe5 dxe5 Nc7 e6 Re8 Re3 Ke7 Rf3 Nxe6 Rfe3 Kd6 Rf3 d4 Rf7 d3 Rxb7 Rf8 f3 Nf4 Rxg7 Ne2+ Kf2 Ne7 Rh7 Nf5 Rxa7 Re8 Ra6+ Kc5 Ra5+",
+    "pgn": "[Event \"Rated Blitz game\"]\n[Site \"https://lichess.org/36ukjVsk\"]\n[Date \"2023.07.28\"]\n[White \"TuttlePower\"]\n[Black \"Cardano83\"]\n[Result \"1-0\"]\n[UTCDate \"2023.07.28\"]\n[UTCTime \"19:35:01\"]\n[WhiteElo \"1594\"]\n[BlackElo \"1607\"]\n[WhiteRatingDiff \"+6\"]\n[BlackRatingDiff \"-6\"]\n[Variant \"Standard\"]\n[TimeControl \"180+0\"]\n[ECO \"B20\"]\n[Termination \"Normal\"]\n\n1. e4 c5 2. Bc4 e6 3. Nf3 d5 4. exd5 exd5 5. Bb3 h6 6. d4 c4 7. Ba4+ Bd7 8. Qe2+ Be7 9. Bxd7+ Qxd7 10. Ne5 Qe6 11. O-O Nc6 12. Re1 Nf6 13. Ng6 Qxe2 14. Rxe2 fxg6 15. Nc3 Kf7 16. Bf4 Rhe8 17. Nb5 Bd8 18. Nd6+ Kf8 19. Nxe8 Nxe8 20. Rae1 Bf6 21. c3 g5 22. Be5 Bxe5 23. dxe5 Nc7 24. e6 Re8 25. Re3 Ke7 26. Rf3 Nxe6 27. Rfe3 Kd6 28. Rf3 d4 29. Rf7 d3 30. Rxb7 Rf8 31. f3 Nf4 32. Rxg7 Ne2+ 33. Kf2 Ne7 34. Rh7 Nf5 35. Rxa7 Re8 36. Ra6+ Kc5 37. Ra5+ 1-0\n\n\n",
+    "clock": {
+        "initial": 180,
+        "increment": 0,
+        "totalTime": 180
+    }
+}
